@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"her_solide_mouvement",
+  "%Name":"player_cam",
   "eventList":[],
   "managed":true,
-  "name":"her_solide_mouvement",
+  "name":"player_cam",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Heritages",
-    "path":"folders/Gameplay/_Heritages.yy",
+    "name":"Player",
+    "path":"folders/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -23,9 +23,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"poids","filters":[],"listItems":[],"multiselect":false,"name":"poids","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"_Tout_niveaux",
-    "path":"folders/Niveaux/_Tout_niveaux.yy",
+    "name":"Gameplay",
+    "path":"folders/Gameplay.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

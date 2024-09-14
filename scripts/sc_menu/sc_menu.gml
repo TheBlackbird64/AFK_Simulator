@@ -26,12 +26,3 @@ function menu_ajouter_widget(widget_name, _x, _y, params={image_index : image_in
 	return inst
 }
 
-function menu_widget_x_pos(x_relative) {
-	// fonction à utiliser uniquement sur un objet fenetre/frame (x_relative entre 0 et 1)
-	return x-obj_larg() + sprite_width*x_relative
-}
-
-function menu_widget_y_pos(y_relative) {
-	// fonction à utiliser uniquement sur un objet fenetre/frame (y_relative entre 0 et 1)
-	return y-obj_haut() + sprite_height*y_relative
-}

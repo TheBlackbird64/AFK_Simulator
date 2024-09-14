@@ -6,8 +6,8 @@
   "name":"niv_mur",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Tout_niveaux",
-    "path":"folders/Niveaux/_Tout_niveaux.yy",
+    "name":"Gameplay",
+    "path":"folders/Gameplay.yy",
   },
   "parentObjectId":{
     "name":"her_solide",

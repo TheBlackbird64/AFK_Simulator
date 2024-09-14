@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"her_pause",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":5,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"player_affichage",
+  "eventList":[],
   "managed":true,
-  "name":"her_pause",
+  "name":"player_affichage",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Heritage",
-    "path":"folders/_General/_Heritage.yy",
+    "name":"Player",
+    "path":"folders/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

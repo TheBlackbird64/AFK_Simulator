@@ -1,44 +1,13 @@
 // Fonctions générales
-function event_pause(pause) {
-	// Définit si la pause est active ou pas
-	global.pause = pause
-	with (her_pause) {event_user(1)}
-}
 
 function event_change_room(_room, _x, _y) {
 	room = _room
 	if instance_exists(player) {event_dep_tp_player(_x, _y)}
 }
 
-// Fonction de sauvegarde
-function event_checkpoint_add(_x, _y, _room=room) {
-	array_push(global.checkpoints, [_x, _y, _room])
-}
-
 function event_demarrage_room(r) {
-	// initialisation de la room
-	var sauvegarde = true
 	
-	// créer le bouton pause si il n'est pas créé (Lorsque le joueur commence un niveau)
-	if not instance_exists(menu_pause_bt) {
-		instance_create_depth(0, 0, -100, menu_pause_bt)
-	}
-	
-	// sauvegarde de la room
-	if sauvegarde {
-		if data_tab_index(global.room_save, room_get_name(room)) == -1
-		{
-			array_push(global.room_save, room_get_name(room))
-			room_persistent = false
-			room_restart()
-		}
-		else
-		{
-			room_persistent = true
-		}
-	}
 }
-
 // fonction relatives au déplacement et au système de collision
 
 function event_dep_x(_x, tab=[], poussee=poids) {

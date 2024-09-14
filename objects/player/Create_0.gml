@@ -22,3 +22,6 @@ recharge_max = 30 // temps du saut
 recharge = 0
 
 sens_gravite = 270
+
+inst_cam = instance_create_depth(x, y, depth, player_cam)
+inst_affichage = instance_create_depth(x, y, depth, player_affichage)

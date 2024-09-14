@@ -6,7 +6,6 @@ set_global_var()
 
 function set_global_var()
 {
-	global.nv_termines = 0
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
 	
 	set_global_var_default ()
@@ -15,12 +14,7 @@ function set_global_var()
 function set_global_var_default () {
 	// remet à zéro ces variables à chaque passages par la room R_Accueil
 	global.animation = false
-	global.pause = false
-	global.room_save = []
-	global.checkpoints = []
 	global.focus = 0
-	global.nv_actuel = 0
-	global.tab_item_sauvegarde = []
 }
 
 //dessin
@@ -286,6 +280,14 @@ function obj_petit_cote(_id=id)
 {
 	if _id.sprite_height < sprite_width {return _id.sprite_height}
 	else {return _id.sprite_width}
+}
+
+function obj_x_pos_rel(x_relative) {
+	return x-obj_larg() + sprite_width*x_relative
+}
+
+function obj_y_pos_rel(y_relative) {
+	return y-obj_haut() + sprite_height*y_relative
 }
 
 function part_convert_dec_neg(dec) {

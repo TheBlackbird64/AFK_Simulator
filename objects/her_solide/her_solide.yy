@@ -6,8 +6,8 @@
   "name":"her_solide",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Her_niveaux",
-    "path":"folders/Niveaux/_Her_niveaux.yy",
+    "name":"_Heritages",
+    "path":"folders/Gameplay/_Heritages.yy",
   },
   "parentObjectId":null,
   "persistent":false,
