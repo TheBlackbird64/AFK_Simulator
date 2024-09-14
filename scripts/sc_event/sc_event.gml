@@ -6,7 +6,7 @@ function event_change_room(_room, _x, _y) {
 }
 
 function event_demarrage_room(r) {
-	
+	instance_create_depth(room_width/2, room_height/2, -100, player)
 }
 // fonction relatives au déplacement et au système de collision
 
@@ -94,26 +94,6 @@ function event_dep(_x, _y) {
 	// à utiliser uniquement dans les objets ayant pour parents her_solide_mouv
 	// COORDONNEES : DEPLACEMENT RELATIF A LA POSITION
 	
-	// Pour faire suivre les instances sur les plateformes
-	if instance_exists(her_solide_gravite) {
-		var tab = ds_list_create()
-		collision_circle_list(x, y, obj_grand_cote(), her_solide_gravite, false, true, tab, false)
-		tab = data_liste_vers_tab(tab)
-		
-		for (var i = 0; array_length(tab) > i; i++) {
-			var t = event_dep_gravite_ligne(tab[i])
-			var x1 = t[0]
-			var x2 = t[1]
-			var y1 = t[2]
-			var y2 = t[3]
-			if collision_line(x1, y1, x2, y2, id, false, false) {
-				with (tab[i]) {
-					event_dep(_x, _y)
-				}
-			}
-		}
-	}
-	
 	event_dep_x(_x)
 	event_dep_y(_y)
 	
@@ -126,17 +106,3 @@ function event_dep_tp_player(_x, _y) { // déplacer player en annulant l'impulsi
 	player.v_acceleration = 0
 }
 
-function event_dep_gravite_ligne(_id=id) {
-	with (_id) {
-		var a = []
-		var gr = degtorad(sens_gravite)
-		var ecartx = 3
-		var ecarty = 3
-		array_push(a, x-(obj_larg()-ecartx)*-sin(gr) + (obj_haut()+ecarty)*cos(gr))
-		array_push(a, x+(obj_larg()-ecartx)*-sin(gr) + (obj_haut()+ecarty)*cos(gr))
-		array_push(a, y+(obj_haut()+ecarty)*-sin(gr) + (obj_larg()-ecartx)*cos(gr))
-		array_push(a, y+(obj_haut()+ecarty)*-sin(gr) - (obj_larg()-ecartx)*cos(gr))
-	}
-	
-	return a
-}

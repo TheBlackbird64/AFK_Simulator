@@ -4,20 +4,17 @@
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"player",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"her_solide_mouvement","path":"objects/her_solide_mouvement/her_solide_mouvement.yy",},"propertyId":{"name":"poids","path":"objects/her_solide_mouvement/her_solide_mouvement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Player",
     "path":"folders/Player.yy",
   },
   "parentObjectId":{
-    "name":"her_solide_gravite",
-    "path":"objects/her_solide_gravite/her_solide_gravite.yy",
+    "name":"her_solide_mouvement",
+    "path":"objects/her_solide_mouvement/her_solide_mouvement.yy",
   },
   "persistent":true,
   "physicsAngularDamping":0.1,
