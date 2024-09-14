@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Sc_event",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sc_event",
+  "parent":{
+    "name":"Events",
+    "path":"folders/Events.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

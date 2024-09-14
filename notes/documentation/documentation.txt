@@ -1,0 +1,118 @@
+
+-----------------------------------------------------------------------------<-- DOCUMENTATION -->-----------------------------------------------------------------------------
+version du template: 1.0
+version du projet: 1.0
+
+
+		BIEN LIRE AVANT DE MODIFIER LE PROJET !!!! 
+
+
+0. Légende: 
+	+: permis
+	-: non permis
+	>: obligation
+	$: propiété/comportement
+	!: pas encore implémenté
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Infos générales
+	1.1 Organisation du projet
+		Events: Tout les évenements qui se déroulent pendant le jeu ayant une action sur le gameplay. Les events peuvent mener à des animations. Les animations sont dans obj_animations quand elles
+		nécéssitent des objets. Si elles doivent éxécuter du code autre que visuel elles appellent une fonction 'action'.
+		Menus: Tout les éléments du menu sont dans her_menus. Les menus individuels ont chacun leur dossier. Tout les boutons qui ont une action sur le jeu doivent appeler une fonction
+		dans Sc_declencheurs.
+		Niveaux: Tout les éléments similaires sont dans Tout_niveaux. Les éléments sensiblements similaires auront leur base dans her_niveaux et leur fils personnalisé sera dans le dossier du niveau
+		en question.
+		Player: Tout les éléments touchant au joueur ainsi que l'affichage.
+	
+	1.2 Infos diverses
+		> Evenements: event0 = déclencheur boutons; event1 = event pause; event2 = ...
+		$ Les instances de contrôle sont permanantes et créées dans Code de démarrage de R_Accueil
+
+
+2. Systèmes de déplacements
+	2.1 Fonctionnement: 
+		her_solide pour les murs qui ne bouge pas et her_solide_mouv pour les murs qui bougent. A chaque deplacement, les objets héritant de her_solide_mouv doivent utiliser la fonction 
+		event_dep(). Cette fonction autorise le déplacement (en x en premier et ensuite en y) si la nouvelle position ne touche pas her_solide ou her_solide_mouv. Si her_solide 
+		est touché le mouvement est annulé. Si her_solide_mouv est touché, on vérifie que la variable poids (commune à tout les objets her_solide_mouv) est supérieure à l'instance touchée,
+		et si c'est le cas on transmet le déplacement à l'instance touchée avec instance.event_dep(). Si cette instance autorise le déplacement, alors le déplacement de l'instance
+		en cours est effectué. Quand un objet solide_mouv est soumis à la gravité il hérite de her_solide_gravite. 
+	
+	2.2 Utilisation:
+		> Faire hériter tout les objets solides de her_solide.
+		> Faire hériter tout les objets solides qui peuvent bouger de her_solide_mouv 
+		> Les objets héritant de her_solide_mouv doivent utiliser la fonction event_dep().
+		+ Permet de faire des déplacements prenant en compte des objets solides.
+		+ Permet de faire des déplacements avec des objets solides qui bougent.
+		+ Permet de faire des déplacements entre 2 objets solides autre que le joueur en fonction de leur poids, le plus lourd peut déplacer le plus léger mais pas l'inverse.
+		+ Permet des déplacements complexes impliquant plusieurs objets solides qui bougent
+		+ Un objet soumis à la gravité suit le mouvement de l'éventuel objet solide_mouv d'en dessous
+		+ optimisé (ne fonctionne que quand un objet bouge)
+		- (peu probable) Ne pas donner une vitesse à un objet plus grande que sa taille, risque de collisions non prises en compte.
+		- La vitesse n'est pas modifié en fonction du poids de l'objet déplacé
+		- Un objet her_solide_mouv ne peut pas entrer en collision avec 2 autres objets her_solide_mouv de poids inférieur.
+	
+
+3. Rooms
+	3.1 Fonctionnement: 
+		Les rooms de niveaux (pas celle d'accueil) doivent suivre le joueur. Elles doivent contenir un calque instance_detecteur qui contiendra tout les détecteurs
+		(murs par exemple) du niveaux. Un objet room_initialisation sera disposé dans toutes les salles. Les rooms dans lesquelles le joueur n'est pas présent
+		ne doivent pas être initialisées. Entrer dans une room se fait avec la fonction event_change_room() dans laquelle on définit les coordonnées pour y rentrer.
+		Option sauvegarde rooms (1): Les rooms restent telle quelle quand le joueur sort et revient, jusqu'à qu'il quitte/finisse le niveau ou meurt, dans ce cas toutes les rooms sont réinitialisées.
+		Option sans sauvegarde (2): Les rooms sont réinitialisées quand le joueur en sort.
+		La sauvegarde est activée par défaut. Pour désactiver la sauvegarde, il faut aller dans la fonction event_demarrage_room et définir 'sauvegarde = true'.
+		
+	3.2 Utilisation:
+		> Interdire l'initialisation des rooms sans joueurs dans room_initialisation
+		> Dupliquer la room R_dupliquer pour les niveaux
+		> Definir les coordonnées de départ pour les niveaux dans sc_info:infos_rooms() .
+		+ (1) Permet de retourner en arrière dans le niveau
+		- (1) Pas de checkpoint en cas de mort, à part si il est au tout début d'une room et qu'on ne peut pas revenir en arrière à cet endroit.
+		- (1) Si un checkpoint est placé la sauvegarde des variables va être compliqué en cas de mort (pièces, vie, ...)
+		+ (2) Permet de placer des checkpoints avec moins de contraintes
+
+
+4. Animations
+	Les animations sont déclenchées comme des event. Si du code doit être éxécuté à la fin d'une animation elle appelle une fonction dans le script Sc_actions. 
+	> Lors d'une animation, mettre la variable global.animation sur true et à la fin la mettre sur false.
+	> Dans tout les objets qui ne doivent pas bouger durant une animation, la variable doit etre utilisée pour bloquer les mouvements non voulus durant les animations.
+
+5. Pause
+	5.1 Utilisation:
+		> Les objets qui doivent être mis en pause doivent hériter de her_pause.
+		> Chaque action 'pausable' doit être encadré par if not global.pause{}
+		+ Les particules se mettent en pause également.
+		
+		
+6. Menus
+	6.1 Fonctionnement: 
+		Les widget ont un focus réglable. Quand le focus est inférieur à la variable globale focus, le widget se bloque pour empêcher 
+		qu'il contienue à interagir même recouvert par une fenetre. Les boutons, quand ils sont cliqués, appellent leur event 0. Cet event
+		doit être relié à une fonction dans menu_declencheur pour faciliter l'acces au code.
+	6.2 Utilisation:
+		> Créer un bouton en le faisant hériter de menu_bouton. 
+		> Créer la fonction dans le script menu_declencheur et la mettre dans event 0
+		> Créer une fenêtre en la faisant hériter de menu_fenetres, et ajouter des widgets à une fenêtre en utilisant les fonctions dans menu
+		+ gère automatiquement la superposition des fenêtre et des widgets
+		+ permet d'avoir des boutons suivant la caméra
+	
+	
+7. Player
+	Système de gravité avec plusieurs paramètres réglables.
+	+ plusieurs paramètres pour modifier le gameplay (distance de freinage, hauteur du saut, accélération, ..)
+	+ Saut variable (appui court = saut court; appui long = saut long)
+	+ système relativement réaliste (saut ralenti quand il arrive à son max par exemple)
+	+ gravité modifiable
+	+ suit les objets en déplacement quand il est dessus (plateforme qui bouge, le joueur peut rester dessus par exemple)
+	- quand la gravité est modifié le joueur peut être bloqué dans un mur si trop près
+	- quand le joueur est sur un objet en déplacement, sauter annule le déplacement (exemple: si le joueur est sur une plateforme qui se déplace horizontalement et qu'il saute tout droit,
+	il va atterir derrière l'endroit ou il était avant de sauter)
+	
+	
+8. Sauvegarde
+	> fonction sauvegarde_load pour 'load' des variables d'un fichier
+	> fonction sauvegarde_save pour sauvegarder dans un fichier
+	> Les variables à sauvegarder doivent être dans la liste des variables à sauvegarder.
+	+ Permet aussi de sauvegarder des listes.
+	- Ne permet pas de sauvegarder des tableaux de tableaux

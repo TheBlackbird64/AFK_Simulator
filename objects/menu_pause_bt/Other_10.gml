@@ -1,0 +1,1 @@
+declencheur_pause()

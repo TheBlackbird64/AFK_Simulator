@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Sc_info",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sc_info",
+  "parent":{
+    "name":"_General",
+    "path":"folders/_General.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

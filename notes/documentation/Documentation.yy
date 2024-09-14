@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"",
+  "%Name":"Documentation",
+  "name":"Documentation",
+  "parent":{
+    "name":"AFK_Simulator",
+    "path":"AFK_Simulator.yyp",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}
