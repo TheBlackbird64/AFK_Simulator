@@ -1,5 +1,5 @@
 
-function menu_creer_fenetre(name, _x, _y, params={image_index : image_index}) {
+function menu_creer_fenetre(name, _x, _y, params={image_index : 0}) {
 	// le dernier parametre fait crash le runner si il est vide (ex: {})
 	global.focus ++
 	var inst = instance_create_depth(_x, _y, -100-(global.focus*5), name, params)
@@ -16,7 +16,7 @@ function menu_detruire_fenetre(name_or_id) {
 	instance_destroy(name_or_id)
 }
 
-function menu_ajouter_widget(widget_name, _x, _y, params={image_index : image_index}) {
+function menu_ajouter_widget(widget_name, _x, _y, params={image_index : 0}) {
 	// fonction à utiliser uniquement sur l'objet fenetre qui a le focus actuellement
 	
 	var inst = instance_create_depth(_x, _y, depth-1, widget_name, params)

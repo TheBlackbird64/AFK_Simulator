@@ -15,12 +15,17 @@ function set_global_var_default () {
 	// remet à zéro ces variables à chaque passages par la room R_Accueil
 	global.animation = false
 	global.focus = 0
+	
+	global.meilleur_temps = "00:00"
+	global.graine_map = 0
+	global.pseudo = ""
+	global.id_joueur = 0
 }
 
 //dessin
 function draw_reset_all()
 {
-	draw_set_color(c_white)
+	draw_set_color(c_black)
 	draw_set_alpha(1)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_left)
@@ -39,23 +44,17 @@ function draw_set_all(col=-1, alpha=-1, valign=-1, halign=-1, font=-1)
 }
 
 // fonctions de données
-function data_liste_caracteres_non_valide(str)
+function data_caracteres_non_valide(str)
 {
-	var liste_carac_autorises = "abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRSTUVWZYZ1234567890_ +-=/<>"
-	var verif = false
+	var liste_carac_autorises = "abcdefghijklmnopqrstuvwzyzABCDEFGHIJKLMNOPQRSTUVWZYZ1234567890_+-=/<>."
 	var result = ""
 	for (var i = 1; string_length(str)+1 > i; i++)
 	{
-		verif = false
-		for (var j = 1; string_length(liste_carac_autorises) > j; j++)
-		{
-			if string_char_at(str, i) == string_char_at(liste_carac_autorises, j) {verif = true}
-		}
-		if not verif {
-			result += "'" + string_char_at(str, i) + "', "
+		if string_pos(string_char_at(str, i), liste_carac_autorises) != 0 {
+			result += string_char_at(str, i)
 		}
 	}
-	if string_length(result) > 0 {result = string_copy(result, 1, string_length(result)-2)}
+	
 	return result
 }
 
@@ -149,6 +148,19 @@ function data_tab_index(tab, value)
 	return index
 }
 
+function data_hex_to_dec(hex) 
+{
+    var dec = 0;
+ 
+    var dig = "0123456789ABCDEF";
+    var len = string_length(hex);
+    for (var pos = 1; pos <= len; pos += 1) {
+        dec = dec << 4 | (string_pos(string_char_at(hex, pos), dig) - 1);
+    }
+ 
+    return dec;
+}
+
 // fonctions de sauvegarde
 function sauvegarde_save(num_save)
 {
@@ -233,14 +245,14 @@ function cam_sync_y(_y)
 	return camera_get_view_y(view_camera[0])+_y*cam_get_zoom()
 }
 
-function cam_mid_x()
+function cam_mid_x(id_cam=0)
 {
-	return camera_get_view_x(view_camera[0])+683*cam_get_zoom()
+	return camera_get_view_x(view_camera[id_cam])+683*cam_get_zoom()
 }
 
-function cam_mid_y()
+function cam_mid_y(id_cam=0)
 {
-	return camera_get_view_y(view_camera[0])+384*cam_get_zoom()
+	return camera_get_view_y(view_camera[id_cam])+384*cam_get_zoom()
 }
 
 

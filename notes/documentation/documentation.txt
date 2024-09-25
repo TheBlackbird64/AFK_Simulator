@@ -27,7 +27,7 @@ version du projet: 1.0
 		- Player: Tout les éléments touchant au joueur ainsi que l'affichage.
 	
 	1.2 Infos diverses
-		> Evenements: event0 = déclencheur boutons; event1 = ...
+		> Evenements: event0 = déclencheur boutons; event1 = ...; event15 = message entrant réseau
 		$ Les instances de contrôle sont permanantes et créées dans Code de démarrage de R_Accueil
 		> Ne pas supprimer le debug!
 
@@ -57,7 +57,7 @@ version du projet: 1.0
 3. Rooms
 	3.1 Fonctionnement: 
 		Les rooms de jeu (pas celle d'accueil) doivent suivre le joueur. Elles doivent contenir un calque instance_detecteur qui contiendra tout les détecteurs
-		(murs par exemple) du niveaux. Un objet room_initialisation sera disposé dans toutes les salles. Les rooms dans lesquelles le joueur n'est pas présent
+		(murs par exemple) du jeu. Un objet room_initialisation sera disposé dans toutes les salles. Les rooms dans lesquelles le joueur n'est pas présent
 		ne doivent pas être initialisées. Entrer dans une room se fait avec la fonction event_change_room() dans laquelle on définit les coordonnées pour y rentrer.
 		
 	3.2 Utilisation:
@@ -93,3 +93,7 @@ version du projet: 1.0
 	> Les variables à sauvegarder doivent être dans la liste des variables à sauvegarder.
 	+ Permet aussi de sauvegarder des listes.
 	- Ne permet pas de sauvegarder des tableaux de tableaux
+
+8. Réseau
+	> Toutes les instances reçoivent un event15 quand une réponse du serveur est reçue. Cette event doit commencer par "rep = client.msg_lire"
+	> room_initialisation est l'instance de controle réseau pendant une partie du jeu

@@ -6,7 +6,7 @@ function event_change_room(_room, _x, _y) {
 }
 
 function event_demarrage_room(r) {
-	instance_create_depth(room_width/2, room_height/2, -100, player)
+	//instance_create_depth(room_width/2, room_height/2, -100, player)
 }
 // fonction relatives au déplacement et au système de collision
 
@@ -104,5 +104,18 @@ function event_dep_tp_player(_x, _y) { // déplacer player en annulant l'impulsi
 	player.y = _y
 	player.h_acceleration = 0
 	player.v_acceleration = 0
+}
+
+// jeu
+function event_commencer_partie() {
+	if instance_exists(player) {instance_destroy()}
+	menu_creer_fenetre(menu_jeu_fen_jouer, room_width/2, room_height/2)
+}
+
+function event_string_to_color(str) {
+	var r = int64(data_hex_to_dec(string_copy(str, 1, 2)))
+	var g = int64(data_hex_to_dec(string_copy(str, 3, 2)))
+	var b = int64(data_hex_to_dec(string_copy(str, 5, 2)))
+	return make_color_rgb(r, g, b)
 }
 

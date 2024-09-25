@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"niv_mur",
+  "%Name":"mur",
   "eventList":[],
   "managed":true,
-  "name":"niv_mur",
+  "name":"mur",
   "overriddenProperties":[],
   "parent":{
     "name":"Gameplay",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_niv_mur",
-    "path":"sprites/S_niv_mur/S_niv_mur.yy",
+    "name":"S_mur",
+    "path":"sprites/S_mur/S_mur.yy",
   },
   "spriteMaskId":null,
   "visible":true,

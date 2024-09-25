@@ -1,0 +1,2 @@
+instance_destroy(inst_affichage)
+instance_destroy(inst_cam)
