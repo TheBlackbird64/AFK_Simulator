@@ -6,7 +6,13 @@ function event_change_room(_room, _x, _y) {
 }
 
 function event_demarrage_room(r) {
-	//instance_create_depth(room_width/2, room_height/2, -100, player)
+	if r == R_Jeu {
+		
+		var t = gen_tab()
+		t = gen_lisser(t, 1)
+	
+		gen_generer_map(t)
+	}
 }
 // fonction relatives au déplacement et au système de collision
 

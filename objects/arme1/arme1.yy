@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"ennemi",
+  "%Name":"arme1",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"ennemi",
+  "name":"arme1",
   "overriddenProperties":[],
   "parent":{
     "name":"Player",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_player",
-    "path":"sprites/S_player/S_player.yy",
+    "name":"S_arme1",
+    "path":"sprites/S_arme1/S_arme1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Sc_generation_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sc_generation_map",
+  "parent":{
+    "name":"Gameplay",
+    "path":"folders/Gameplay.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

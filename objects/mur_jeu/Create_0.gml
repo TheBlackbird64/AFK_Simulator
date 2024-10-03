@@ -1,0 +1,1 @@
+obj_set_scale(0.5)
