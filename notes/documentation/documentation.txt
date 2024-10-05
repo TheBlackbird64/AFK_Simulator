@@ -95,5 +95,8 @@ version du projet: 1.0
 	- Ne permet pas de sauvegarder des tableaux de tableaux
 
 8. Réseau
-	> Toutes les instances reçoivent un event15 quand une réponse du serveur est reçue. Cette event doit commencer par "rep = client.msg_lire"
+	> Toutes les instances reçoivent un event15 quand une réponse du serveur est reçue. Cet event doit commencer par "rep = client.msg_lire"
 	> room_initialisation est l'instance de controle réseau pendant une partie du jeu
+
+9. Generation de la map
+	> Toutes les variables de génération sont dans le script set_global_var()

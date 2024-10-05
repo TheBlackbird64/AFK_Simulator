@@ -19,6 +19,7 @@ v_coef_acceleration = 0.1
 v_coef_deceleration = 0.85
 
 inst_cam = instance_create_depth(x, y, depth, player_cam)
+instance_create_depth(x, y, depth, player_tir)
 
 // Variables de jeu
 col = "000000"

@@ -41,8 +41,10 @@ if not global.animation {
 	
 	event_dep(dep_h, dep_v)
 	
-	// animation
-	
+	// actualiser
+	reseau_send(["a", string(int64(x)), string(int64(y)), player_tir.dir_projectile])
+	player_tir.dir_projectile = -1
 }
 else
 {image_index = 0}
+

@@ -39,7 +39,7 @@ if rep[0] == "a" {
 			}
 		}
 		
-		if not exists {
+		if not exists and int64(tab_tmp[i][0]) != global.id_joueur {
 			idtmp = instance_create_depth(0, 0, -100, ennemi)
 			idtmp.id_ennemi = int64(tab_tmp[i][0])
 			idtmp.x = int64(tab_tmp[i][2])

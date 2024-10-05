@@ -7,8 +7,11 @@ set_global_var()
 function set_global_var()
 {
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
+	
+	// Vars de génération map
 	global.gen_taille_map = 50
 	global.gen_val_inferieure = 0.8
+	global.nb_voisins = 3
 	
 	set_global_var_default ()
 }

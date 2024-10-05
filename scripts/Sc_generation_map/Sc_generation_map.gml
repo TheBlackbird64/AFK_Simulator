@@ -13,9 +13,10 @@ function gen_tab() {
 }
 
 function gen_voisins(t, i, j) {
+	
 	var tab = []
-	for (var i1 = -1; 1 > i1; i1++) {
-		for (var j1 = -1; 1 > j1; j1++) {
+	for (var i1 = -1; 1 >= i1; i1++) {
+		for (var j1 = -1; 1 >= j1; j1++) {
 			try {
 				array_push(tab, t[i+i1][j+j1])
 			} catch (e) {}
@@ -28,7 +29,7 @@ function gen_voisins(t, i, j) {
 function gen_nb_voisins_val(liste, valsup, valinf) {
 	var res = 0
     for (var i = 0; array_length(liste) > i; i++) {
-		if i >= valinf and i <= valsup {
+		if liste[i] >= valinf and liste[i] <= valsup {
 			res += 1
 		}
 	}
@@ -36,16 +37,16 @@ function gen_nb_voisins_val(liste, valsup, valinf) {
     return res
 }
 
-function gen_lisser(t, nb=1) { 
+function gen_lisser(t, nb=1) {  // parametres à changer pr la génération
 	var val_inferieure = global.gen_val_inferieure
-	var nb_voisins = 4
+	var nb_voisins = global.nb_voisins
 	
 	var t2 = []
 	
 	for (var i = 0; global.gen_taille_map > i; i++) {
 		array_push(t2, [])
 		for (var j = 0; global.gen_taille_map > j; j++) {
-			if gen_nb_voisins_val(gen_voisins(t, i, j), 1, val_inferieure) >= nb_voisins{
+			if gen_nb_voisins_val(gen_voisins(t, i, j), 1, val_inferieure) > nb_voisins {
 				array_push(t2[i], random_range(val_inferieure, 1))
 			}
 			else {

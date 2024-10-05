@@ -54,6 +54,7 @@
     {"id":{"name":"mur_jeu","path":"objects/mur_jeu/mur_jeu.yy",},},
     {"id":{"name":"mur","path":"objects/mur/mur.yy",},},
     {"id":{"name":"player_cam","path":"objects/player_cam/player_cam.yy",},},
+    {"id":{"name":"player_tir","path":"objects/player_tir/player_tir.yy",},},
     {"id":{"name":"player","path":"objects/player/player.yy",},},
     {"id":{"name":"room_initialisation","path":"objects/room_initialisation/room_initialisation.yy",},},
     {"id":{"name":"R_accueil","path":"rooms/R_accueil/R_accueil.yy",},},
