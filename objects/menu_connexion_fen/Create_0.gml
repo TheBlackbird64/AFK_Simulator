@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+depth = -500
 
 x = cam_mid_x()
 y = cam_mid_y()

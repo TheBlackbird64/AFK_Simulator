@@ -14,7 +14,7 @@ function reseau_connexion() {
 	else {return sock_client}
 }
 
-function reseau_send(msg_tab) {
+function reseau_send(msg_tab, sock = client.socket) {
 	msg_tab = data_regrouper(msg_tab, client.sep2)
 	msg_tab += client.sep1
 	
@@ -22,7 +22,10 @@ function reseau_send(msg_tab) {
 	buffer_seek(buff, buffer_seek_start, 0)
 	buffer_write(buff, buffer_string, msg_tab)
 	
-	network_send_raw(client.socket, buff, string_length(msg_tab))
+	if network_send_raw(sock, buff, string_length(msg_tab)) < 0 {
+		network_destroy(client.socket)
+		client.connecte = false
+	}
 }
 
 function reseau_tout_separer(str, tab_sep, i=0) {
@@ -38,4 +41,52 @@ function reseau_tout_separer(str, tab_sep, i=0) {
 	}
 	
 	return tab
+}
+
+
+function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
+	
+	with (nom_obj) {suppr = true}
+	
+	var tab_tmp = tab_infos
+	var idtmp = 0
+	var exists = false
+	
+	for (var i = 0; array_length(tab_infos) > i; i++) {
+		exists = false
+		
+		for (var id_inst = 0; instance_number(nom_obj) > id_inst; id_inst++) {
+			idtmp = instance_find(nom_obj, id_inst)
+		
+			// actualiser
+			if idtmp._id == int64(tab_tmp[i][0]) {
+				exists = true
+				idtmp.suppr = false
+				
+				for (var j = 0; array_length(tab_vars) > j; j++) {
+					variable_instance_set(idtmp, tab_vars[j], tab_tmp[i][j+1])
+				}
+			
+				break;
+			}
+		}
+		
+		if not (int64(tab_tmp[i][0]) == global.id_joueur and nom_obj == ennemi) {
+			if not exists {
+				idtmp = instance_create_depth(0, 0, -100, nom_obj)
+				idtmp._id = int64(tab_tmp[i][0])
+			
+				for (var j = 0; array_length(tab_vars) > j; j++) {
+					if is_string(variable_instance_get(idtmp, tab_vars[j])) {
+						variable_instance_set(idtmp, tab_vars[j], tab_tmp[i][j+1])
+					}
+					else {
+						variable_instance_set(idtmp, tab_vars[j], int64(tab_tmp[i][j+1]))
+					}
+				}
+			}
+		}
+	}
+	
+	if instance_exists(nom_obj) {with (nom_obj) {if suppr {instance_destroy()}}}
 }

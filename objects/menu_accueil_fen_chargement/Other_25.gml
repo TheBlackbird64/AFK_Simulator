@@ -1,5 +1,5 @@
 rep = client.msg_lire
-show_debug_message(rep)
+
 
 if rep[0] == "p" {
 	global.graine_map = int64(rep[1])

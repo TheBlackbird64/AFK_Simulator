@@ -20,7 +20,15 @@ v_coef_deceleration = 0.85
 
 inst_cam = instance_create_depth(x, y, depth, player_cam)
 instance_create_depth(x, y, depth, player_tir)
+instance_create_depth(x, y, depth-10, interface_dessiner)
 
 // Variables de jeu
-col = "000000"
+_id = global.id_joueur
+pseudo = global.pseudo
 vie = 0
+col = "000000"
+actualise = false
+
+// pr ne pas mettre à jour les coordonnés :
+__x = 0
+__y = 0

@@ -57,7 +57,7 @@ version du projet: 1.0
 3. Rooms
 	3.1 Fonctionnement: 
 		Les rooms de jeu (pas celle d'accueil) doivent suivre le joueur. Elles doivent contenir un calque instance_detecteur qui contiendra tout les détecteurs
-		(murs par exemple) du jeu. Un objet room_initialisation sera disposé dans toutes les salles. Les rooms dans lesquelles le joueur n'est pas présent
+		(murs par exemple) du jeu. Un objet room_control sera disposé dans toutes les salles. Les rooms dans lesquelles le joueur n'est pas présent
 		ne doivent pas être initialisées. Entrer dans une room se fait avec la fonction event_change_room() dans laquelle on définit les coordonnées pour y rentrer.
 		
 	3.2 Utilisation:
@@ -96,7 +96,7 @@ version du projet: 1.0
 
 8. Réseau
 	> Toutes les instances reçoivent un event15 quand une réponse du serveur est reçue. Cet event doit commencer par "rep = client.msg_lire"
-	> room_initialisation est l'instance de controle réseau pendant une partie du jeu
+	> room_control est l'instance de controle réseau pendant une partie du jeu
 
 9. Generation de la map
 	> Toutes les variables de génération sont dans le script set_global_var()

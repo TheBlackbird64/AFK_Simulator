@@ -9,9 +9,20 @@ function event_demarrage_room(r) {
 	if r == R_Jeu {
 		
 		var t = gen_tab()
-		t = gen_lisser(t, 1)
+		t = gen_lisser(t, 2)
 	
-		gen_generer_map(t)
+		gen_generer_map(t, 250, 250)
+		/*
+		for (var i = 0; global.gen_taille_map > i; i++)
+		{
+		    for (var j = 0; global.gen_taille_map > j; j++)
+		    {
+		        if (t[i][j] > global.gen_val_inferieure)
+		        {
+		            show_debug_message(string(i) + "   " + string(j) + " : " + string(t[i][j]));
+		        }
+		    }
+		}//*/
 	}
 }
 // fonction relatives au déplacement et au système de collision
@@ -114,8 +125,9 @@ function event_dep_tp_player(_x, _y) { // déplacer player en annulant l'impulsi
 
 // jeu
 function event_commencer_partie() {
-	if instance_exists(player) {instance_destroy()}
 	menu_creer_fenetre(menu_jeu_fen_jouer, room_width/2, room_height/2)
+	if instance_exists(player) {instance_destroy(player)}
+	
 }
 
 function event_string_to_color(str) {

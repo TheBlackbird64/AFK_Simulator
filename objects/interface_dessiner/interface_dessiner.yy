@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"room_initialisation",
+  "%Name":"interface_dessiner",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":25,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"room_initialisation",
+  "name":"interface_dessiner",
   "overriddenProperties":[],
   "parent":{
-    "name":"script_rooms",
-    "path":"folders/_General/script_rooms.yy",
+    "name":"interface",
+    "path":"folders/Player/interface.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -7,11 +7,16 @@ set_global_var()
 function set_global_var()
 {
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
+	global.vie_max = 100
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
-	global.gen_val_inferieure = 0.8
-	global.nb_voisins = 3
+	global.gen_val_inferieure = 0.6
+	global.gen_nb_voisins = 3
+	global.nb_dec = 3
+	
+	// Vars de génération (uniquement visuel donc que coté client)
+	global.gen_intervalle_col = 0.3
 	
 	set_global_var_default ()
 }
@@ -21,7 +26,8 @@ function set_global_var_default () {
 	global.animation = false
 	global.focus = 0
 	
-	global.meilleur_temps = "00:00"
+	global.temps = 0
+	global.meilleur_temps = 0
 	global.graine_map = 0
 	global.pseudo = ""
 	global.id_joueur = 0
@@ -79,7 +85,7 @@ function data_regrouper(tab, caractere)
 	var b = ""
 	while a < array_length(tab)
 	{
-		b += string(tab[a]) + caractere
+		b += string_format(tab[a], 0, 3) + caractere
 		a++
 	}
 	b = string_copy(b, 1, string_length(b)-string_length(caractere))
@@ -164,6 +170,34 @@ function data_hex_to_dec(hex)
     }
  
     return dec;
+}
+
+function data_time_ms_to_str(ms, allowMS=true, allowS=true, allowMN=true, allowH=true) {
+	var s = 0
+	var mn = 0
+	var h = 0
+	
+	s = ms div 1000
+	ms = string(ms mod 1000)
+	
+	mn = s div 60
+	s = string(s mod 60)
+	
+	h = string(mn div 60)
+	mn = string(mn mod 60)
+	
+	if string_length(ms) == 1 {ms = "0" + ms}
+	if string_length(s) == 1 {s = "0" + s}
+	if string_length(mn) == 1 {mn = "0" + mn}
+	if string_length(h) == 1 {h = "0" + h}
+	
+	var res = []
+	if allowH {array_push(res, h)}
+	if allowMN {array_push(res, mn)}
+	if allowS {array_push(res, s)}
+	if allowMS {array_push(res, ms)}
+	
+	return data_regrouper(res, ":")
 }
 
 // fonctions de sauvegarde
