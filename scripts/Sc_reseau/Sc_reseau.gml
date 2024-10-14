@@ -71,7 +71,7 @@ function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
 			}
 		}
 		
-		if not (int64(tab_tmp[i][0]) == global.id_joueur and nom_obj == ennemi) {
+		if not (int64(tab_tmp[i][0]) == global.id_joueur and (nom_obj == ennemi or nom_obj == player)) {
 			if not exists {
 				idtmp = instance_create_depth(0, 0, -100, nom_obj)
 				idtmp._id = int64(tab_tmp[i][0])

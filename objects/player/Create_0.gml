@@ -25,10 +25,11 @@ instance_create_depth(x, y, depth-10, interface_dessiner)
 // Variables de jeu
 _id = global.id_joueur
 pseudo = global.pseudo
-vie = 0
+vie = global.vie_max
 col = "000000"
-actualise = false
 
 // pr ne pas mettre à jour les coordonnés :
-__x = 0
-__y = 0
+__x = -1
+__y = -1
+
+compteur_invincible = 30

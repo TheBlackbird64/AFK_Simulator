@@ -7,7 +7,7 @@ set_global_var()
 function set_global_var()
 {
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
-	global.vie_max = 100
+	global.vie_max = 100 // juste pr le dessin (barre vie)
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
@@ -15,10 +15,12 @@ function set_global_var()
 	global.gen_nb_voisins = 3
 	global.nb_dec = 3
 	
-	// Vars de génération (uniquement visuel donc que coté client)
-	global.gen_intervalle_col = 0.3
+	// Vars de génération (uniquement visuel donc que coté client) 0.07; 1
+	global.gen_intervalle_col = 0.07
+	global.gen_nb_voisins_col = 1
 	
 	set_global_var_default ()
+	action_mort_joueur(true)
 }
 
 function set_global_var_default () {

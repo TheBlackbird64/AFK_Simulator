@@ -21,3 +21,7 @@ function declencheur_lancer_partie() {
 	if instance_exists(player) {instance_destroy(player)}
 	instance_create_depth(_x, _y, -100, player)
 }
+
+function declencheur_retour() {
+	
+}

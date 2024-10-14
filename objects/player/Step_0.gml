@@ -44,11 +44,15 @@ if not global.animation {
 	// actualiser
 	reseau_send(["a", string(round(x)), string(round(y)),  string(player_tir.dir_projectile)])
 	player_tir.dir_projectile = -1
+	
+	if compteur_invincible > 0 {compteur_invincible--}
+	if vie <= 0 and compteur_invincible == 0 {
+		
+		action_game_over_player()
+	}
+
 }
 else
 {image_index = 0}
 
 
-if vie <= 0 and actualise {
-	event_commencer_partie()
-}

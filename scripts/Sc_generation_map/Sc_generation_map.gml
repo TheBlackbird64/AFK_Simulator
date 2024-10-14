@@ -1,7 +1,9 @@
 
 // générateur congruentiel
-function gen_nb_rnd(graine=-1) {
+function gen_nb_rnd(graine=-1, recup_graine=false) {
 	static _x = 0
+	if recup_graine {return _x}
+	
 	if graine != -1 {
 		_x = graine
 	}
@@ -77,7 +79,7 @@ function gen_lisser(t, nb=1, val_inferieure=global.gen_val_inferieure, nb_voisin
 			}
 			else { 
 				// gestion des couleurs ici
-				if gen_nb_voisins_val(voi, val_inferieure-global.gen_intervalle_col, val_inferieure-power(10, -nb_dec)) > nb_voisins {
+				if gen_nb_voisins_val(voi, val_inferieure-global.gen_intervalle_col, val_inferieure-power(10, -nb_dec)) > global.gen_nb_voisins_col {
 					array_push(t2[i], gen_random_range(val_inferieure-global.gen_intervalle_col, val_inferieure-power(10, -nb_dec)))
 				}
 				else {
@@ -109,7 +111,7 @@ function gen_generer_map(t, coinG, coinD, dep=-10, val_inferieure=global.gen_val
 				// couleurs carte
 				valtmp = val_inferieure-global.gen_intervalle_col
 				if t[i][j] >= valtmp {
-					instance_create_depth(coinG+25 + taille*i, coinD+25 + taille*j, dep, sol_color, {col : floor((t[i][j]-valtmp)*10)})
+					instance_create_depth(coinG+25 + taille*i, coinD+25 + taille*j, dep, sol_color)//, {col : floor((t[i][j]-valtmp)*10)})
 				}
 			}
 		}
