@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"menu_fin_partie_bt_retour",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"menu_bouton","path":"objects/menu_bouton/menu_bouton.yy",},"propertyId":{"name":"scale","path":"objects/menu_bouton/menu_bouton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.7",},
+  ],
   "parent":{
     "name":"menu_fin_partie",
     "path":"folders/Menus/menu_fin_partie.yy",

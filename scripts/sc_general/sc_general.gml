@@ -27,12 +27,15 @@ function set_global_var_default () {
 	// remet à zéro ces variables à chaque passages par la room R_Accueil
 	global.animation = false
 	global.focus = 0
+	global.pause = false
 	
 	global.temps = 0
 	global.meilleur_temps = 0
 	global.graine_map = 0
 	global.pseudo = ""
 	global.id_joueur = 0
+	
+	global.pseudo_gagnant = ""
 }
 
 //dessin

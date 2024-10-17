@@ -23,5 +23,5 @@ function declencheur_lancer_partie() {
 }
 
 function declencheur_retour() {
-	
+	event_change_room(R_accueil, 0, 0)
 }

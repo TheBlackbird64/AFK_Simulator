@@ -10,10 +10,12 @@ if rep[0] == "a" {
 		reseau_traiter_msg_actu(arme1, rep[3], ["x", "y", "dir", "id_joueur"])
 	}
 	if array_length(rep) > 4 {
-		reseau_traiter_msg_actu(arme1, rep[4], ["x", "y", "col"])
+		reseau_traiter_msg_actu(item_color, rep[4], ["type", "x", "y", "col"])
 	}
 	
 }
 if rep[0] == "g" {
-	global.animation = true
+	global.pseudo_gagnant = rep[1]
+	global.pause = true
+	menu_creer_fenetre(menu_fin_partie_fen, cam_mid_x(), cam_mid_y())
 }

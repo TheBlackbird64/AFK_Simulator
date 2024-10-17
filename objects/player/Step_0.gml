@@ -1,5 +1,5 @@
 
-if not global.animation {
+if not global.animation and not global.pause {
 
 	// mouv horizontal
 	var touche_appuye = false
