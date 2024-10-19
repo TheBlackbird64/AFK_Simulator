@@ -55,6 +55,8 @@ function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
 	for (var i = 0; array_length(tab_infos) > i; i++) {
 		exists = false
 		
+		if tab_tmp != "*" {
+			
 		for (var id_inst = 0; instance_number(nom_obj) > id_inst; id_inst++) {
 			idtmp = instance_find(nom_obj, id_inst)
 		
@@ -71,7 +73,7 @@ function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
 			}
 		}
 		
-		if not (int64(tab_tmp[i][0]) == global.id_joueur and (nom_obj == ennemi or nom_obj == player)) {
+		if (nom_obj != player) and not (nom_obj == ennemi and global.id_joueur == int64(tab_tmp[i][0])) {
 			if not exists {
 				idtmp = instance_create_depth(0, 0, -100, nom_obj)
 				idtmp._id = int64(tab_tmp[i][0])
@@ -85,6 +87,7 @@ function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
 					}
 				}
 			}
+		}
 		}
 	}
 	

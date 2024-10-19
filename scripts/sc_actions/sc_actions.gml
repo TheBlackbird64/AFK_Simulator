@@ -6,7 +6,7 @@ function action_draw_joueur() {
 		
 		var ecart = 2
 		
-		draw_set_all(c_black, 1, fa_middle, fa_center, Font_principal) // (3000-temps) / 3000
+		draw_set_all(c_black, (3000-temps) / 3000, fa_middle, fa_center, Font_principal) // 
 		
 		draw_text(x+obj_larg(), y-15, pseudo)
 		draw_set_color(c_black)
@@ -39,11 +39,12 @@ function action_mort_joueur(setup=false) {
 		part_type_life(_ptype1, 30, 60)
 	}
 	else {
+		show_debug_message("test")
 		part_system_depth(_ps, depth-1)
 		var color = event_string_to_color(col)
 		part_type_colour3(_ptype1, $333333, color, color);
-		var zone = 25
-		part_emitter_region(_ps, _pemit1, x-zone, x+zone, y-zone, y+zone, ps_shape_ellipse, ps_distr_linear);
+		var zone = 50
+		part_emitter_region(_ps, _pemit1, x, x+zone, y, y+zone, ps_shape_ellipse, ps_distr_linear);
 		part_emitter_burst(_ps, _pemit1, _ptype1, 50);
 	}
 
