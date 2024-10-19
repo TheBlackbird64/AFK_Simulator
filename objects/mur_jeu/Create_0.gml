@@ -10,10 +10,10 @@ if col != -1 {
 		}
 	}
 	else {
-		var d = global.gen_val_inferieure
+		var d = 1-global.gen_val_inferieure
 		image_index = 3
-		if col < global.gen_val_inferieure+0.14 {image_index = 2}
-		if col < global.gen_val_inferieure+0.07 {image_index = 1}
+		if col < global.gen_val_inferieure+2/3*d {image_index = 2}
+		if col < global.gen_val_inferieure+1/3*d {image_index = 1}
 		if col < global.gen_val_inferieure {image_index = 0}
 	}
 }

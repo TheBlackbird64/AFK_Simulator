@@ -27,6 +27,7 @@ _id = global.id_joueur
 pseudo = global.pseudo
 vie = global.vie_max
 col = "000000"
+temps = 0
 
 // pr ne pas mettre à jour les coordonnés :
 __x = -1

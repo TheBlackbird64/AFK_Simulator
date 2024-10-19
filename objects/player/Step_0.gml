@@ -42,6 +42,9 @@ if not global.animation and not global.pause {
 	event_dep(dep_h, dep_v)
 	
 	// actualiser
+	//global.temps_joueur = temps
+	if global.temps_joueur > global.meilleur_temps {global.meilleur_temps = global.temps_joueur}
+	
 	reseau_send(["a", string(round(x)), string(round(y)),  string(player_tir.dir_projectile)])
 	player_tir.dir_projectile = -1
 	

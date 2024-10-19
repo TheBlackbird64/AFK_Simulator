@@ -8,6 +8,7 @@ function set_global_var()
 {
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
 	global.vie_max = 100 // juste pr le dessin (barre vie)
+	global.tps_actualiser_serv_ms = 50
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
@@ -29,7 +30,7 @@ function set_global_var_default () {
 	global.focus = 0
 	global.pause = false
 	
-	global.temps = 0
+	global.temps_joueur = 0
 	global.meilleur_temps = 0
 	global.graine_map = 0
 	global.pseudo = ""

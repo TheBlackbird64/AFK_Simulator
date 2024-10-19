@@ -1,16 +1,14 @@
 rep = client.msg_lire
 
 if rep[0] == "a" {
-	global.temps = int64(rep[1])
-	if global.temps > global.meilleur_temps {global.meilleur_temps = global.temps}
 	
-	reseau_traiter_msg_actu(ennemi, rep[2], ["pseudo", "x", "y", "vie", "col"])
-	reseau_traiter_msg_actu(player, rep[2], ["pseudo", "__x", "__y", "vie", "col"])
-	if array_length(rep) > 3 {
-		reseau_traiter_msg_actu(arme1, rep[3], ["x", "y", "dir", "id_joueur"])
+	reseau_traiter_msg_actu(ennemi, rep[1], ["pseudo", "temps", "x", "y", "vie", "col"])
+	reseau_traiter_msg_actu(player, rep[1], ["pseudo", "temps", "__x", "__y", "vie", "col"])
+	if array_length(rep) > 2 {
+		reseau_traiter_msg_actu(arme1, rep[2], ["x", "y", "dir", "id_joueur"])
 	}
-	if array_length(rep) > 4 {
-		reseau_traiter_msg_actu(item_color, rep[4], ["type", "x", "y", "col"])
+	if array_length(rep) > 3 {
+		reseau_traiter_msg_actu(item_color, rep[3], ["type", "x", "_y", "col"])
 	}
 	
 }

@@ -13,7 +13,10 @@
     "name":"Player",
     "path":"folders/Player.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"her_lisser_position",
+    "path":"objects/her_lisser_position/her_lisser_position.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

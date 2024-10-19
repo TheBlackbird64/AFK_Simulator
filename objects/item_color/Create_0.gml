@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
 col = 0
+
 /*
 
 //Part_item_color

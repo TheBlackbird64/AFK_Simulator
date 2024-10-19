@@ -1,4 +1,5 @@
 
 compteur++
 if compteur > 360 {compteur = 0}
-y = _y + sin(degtorad(compteur))*15
+y = _y
+y += sin(degtorad(compteur))*15

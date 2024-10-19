@@ -6,10 +6,14 @@ function action_draw_joueur() {
 		
 		var ecart = 2
 		
+		draw_set_all(c_black, 1, fa_middle, fa_center, Font_principal) // (3000-temps) / 3000
+		
+		draw_text(x+obj_larg(), y-15, pseudo)
 		draw_set_color(c_black)
-		draw_rectangle(x, y-obj_haut()-15, x+sprite_width, y-obj_haut()-30, true)
+		draw_rectangle(x, y-obj_haut()-10, x+sprite_width, y-obj_haut()-25, true)
 		draw_set_color($00FF00)
-		draw_rectangle(x+ecart, y-obj_haut()-15-ecart, x+ecart + (vie/global.vie_max)*(obj_larg()*2-2*ecart), y-obj_haut()-30+ecart, false)
+		draw_rectangle(x+ecart, y-obj_haut()-10-ecart, x+ecart + (vie/global.vie_max)*(obj_larg()*2-2*ecart), y-obj_haut()-25+ecart, false)
+		draw_reset_all()
 	}
 }
 

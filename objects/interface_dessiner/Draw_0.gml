@@ -26,4 +26,4 @@ for (var i = 0; 3 > i; i++) {
 }
 
 draw_set_all(c_black, 1, fa_middle, fa_center, Font_grand)
-draw_text(cam_mid_x(), camera_get_view_y(view_camera[0])+50, data_time_ms_to_str(global.temps, false, true, true, false))
+draw_text(cam_mid_x(), camera_get_view_y(view_camera[0])+50, data_time_ms_to_str(global.temps_joueur, false, true, true, false))
