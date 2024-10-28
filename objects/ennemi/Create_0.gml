@@ -6,3 +6,4 @@ temps = 0
 
 
 visible = false
+explose = true

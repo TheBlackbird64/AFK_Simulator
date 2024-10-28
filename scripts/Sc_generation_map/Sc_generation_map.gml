@@ -105,13 +105,13 @@ function gen_generer_map(t, coinG, coinD, dep=-10, val_inferieure=global.gen_val
 	for (var i = 0; array_length(t) > i; i++) {
 		for (var j = 0; array_length(t[i]) > j; j++) {
 			if t[i][j] >= val_inferieure {
-				instance_create_depth(coinG+25 + taille*i, coinD+25 + taille*j, dep, mur_jeu, {col : t[i][j]})
+				instance_create_depth(coinG + taille*i, coinD + taille*j, dep, mur_jeu, {col : t[i][j]})
 			}
 			else {
 				// couleurs carte
 				valtmp = val_inferieure-global.gen_intervalle_col
 				if t[i][j] >= valtmp {
-					instance_create_depth(coinG+25 + taille*i, coinD+25 + taille*j, dep, sol_color)//, {col : floor((t[i][j]-valtmp)*10)})
+					instance_create_depth(coinG + taille*i, coinD + taille*j, dep, sol_color)//, {col : floor((t[i][j]-valtmp)*10)})
 				}
 			}
 		}

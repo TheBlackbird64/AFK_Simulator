@@ -73,6 +73,7 @@
     {"id":{"name":"Part_test","path":"particles/Part_test/Part_test.yy",},},
     {"id":{"name":"R_accueil","path":"rooms/R_accueil/R_accueil.yy",},},
     {"id":{"name":"R_dupliquer","path":"rooms/R_dupliquer/R_dupliquer.yy",},},
+    {"id":{"name":"R_Jeu_1","path":"rooms/R_Jeu_1/R_Jeu_1.yy",},},
     {"id":{"name":"R_Jeu","path":"rooms/R_Jeu/R_Jeu.yy",},},
     {"id":{"name":"Sc_actions","path":"scripts/Sc_actions/Sc_actions.yy",},},
     {"id":{"name":"Sc_event","path":"scripts/Sc_event/Sc_event.yy",},},
@@ -106,6 +107,7 @@
     {"roomId":{"name":"R_accueil","path":"rooms/R_accueil/R_accueil.yy",},},
     {"roomId":{"name":"R_dupliquer","path":"rooms/R_dupliquer/R_dupliquer.yy",},},
     {"roomId":{"name":"R_Jeu","path":"rooms/R_Jeu/R_Jeu.yy",},},
+    {"roomId":{"name":"R_Jeu_1","path":"rooms/R_Jeu_1/R_Jeu_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
