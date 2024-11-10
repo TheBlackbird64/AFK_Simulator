@@ -39,7 +39,6 @@ function action_mort_joueur(setup=false) {
 		part_type_life(_ptype1, 30, 60)
 	}
 	else {
-		show_debug_message("test")
 		part_system_depth(_ps, depth-1)
 		var color = event_string_to_color(col)
 		part_type_colour3(_ptype1, $333333, color, color);

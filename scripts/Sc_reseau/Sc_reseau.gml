@@ -57,27 +57,35 @@ function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
 		
 		if tab_tmp != "*" {
 			
-		for (var id_inst = 0; instance_number(nom_obj) > id_inst; id_inst++) {
-			idtmp = instance_find(nom_obj, id_inst)
+			for (var id_inst = 0; instance_number(nom_obj) > id_inst; id_inst++) {
+				idtmp = instance_find(nom_obj, id_inst)
 		
-			// actualiser
-			if idtmp._id == int64(tab_tmp[i][0]) {
-				exists = true
-				idtmp.suppr = false
+				// actualiser
+				if idtmp._id == int64(tab_tmp[i][0]) {
+					exists = true
+					idtmp.suppr = false
 				
-				for (var j = 0; array_length(tab_vars) > j; j++) {
-					variable_instance_set(idtmp, tab_vars[j], tab_tmp[i][j+1])
+					for (var j = 0; array_length(tab_vars) > j; j++) {
+						variable_instance_set(idtmp, tab_vars[j], tab_tmp[i][j+1])
+					}
+			
+					break;
 				}
-			
-				break;
 			}
-		}
-		
-		if (nom_obj != player) and not (nom_obj == ennemi and global.id_joueur == int64(tab_tmp[i][0])) {
-			if not exists {
-				idtmp = instance_create_depth(0, 0, -100, nom_obj)
-				idtmp._id = int64(tab_tmp[i][0])
 			
+			if not exists {
+				// creation de l'objet
+				if nom_obj == joueur {
+					var ctrl = int64(tab_tmp[i][0]) == global.id_joueur
+					idtmp = instance_create_depth(0, 0, -100, nom_obj, {control : ctrl})
+				}
+				else {
+					idtmp = instance_create_depth(0, 0, -100, nom_obj)
+				}
+				
+				// attribution des variables en commençant par l'id
+				idtmp._id = int64(tab_tmp[i][0])
+		
 				for (var j = 0; array_length(tab_vars) > j; j++) {
 					if is_string(variable_instance_get(idtmp, tab_vars[j])) {
 						variable_instance_set(idtmp, tab_vars[j], tab_tmp[i][j+1])
@@ -87,7 +95,6 @@ function reseau_traiter_msg_actu(nom_obj, tab_infos, tab_vars) {
 					}
 				}
 			}
-		}
 		}
 	}
 	

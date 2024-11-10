@@ -1,8 +1,7 @@
 // Fonctions générales
 
-function event_change_room(_room, _x, _y) {
+function event_change_room(_room) {
 	room = _room
-	if instance_exists(player) {event_dep_tp_player(_x, _y)}
 }
 
 function event_demarrage_room(r) {
@@ -10,7 +9,7 @@ function event_demarrage_room(r) {
 		
 		var t = gen_tab()
 		t = gen_lisser(t, 2)
-	
+		
 		gen_generer_map(t, 250, 250)
 		/*
 		for (var i = 0; global.gen_taille_map > i; i++)
@@ -126,7 +125,7 @@ function event_dep_tp_player(_x, _y) { // déplacer player en annulant l'impulsi
 // jeu
 function event_commencer_partie() {
 	menu_creer_fenetre(menu_jeu_fen_jouer, room_width/2, room_height/2)
-	if instance_exists(player) {instance_destroy(player)}
+	if instance_exists(player_cam) {instance_destroy(player_cam)}
 	
 }
 

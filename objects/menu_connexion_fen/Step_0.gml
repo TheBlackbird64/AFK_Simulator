@@ -1,5 +1,11 @@
-if client.connecte {
-	menu_detruire_fenetre(id)
+if client.connecte and not envoi {
+	if global.id_joueur == -1 {
+		menu_detruire_fenetre(id)
+	}
+	else {
+		reseau_send(["c", string(global.id_joueur)])
+		envoi = true
+	}
 }
 
 x = cam_mid_x()

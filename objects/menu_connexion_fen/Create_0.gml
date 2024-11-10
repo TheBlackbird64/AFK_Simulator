@@ -9,3 +9,6 @@ if view_get_visible(1) {
 	y = cam_mid_y(1)
 }
 obj_set_scale(0.5)
+
+global.pause = true
+envoi = false

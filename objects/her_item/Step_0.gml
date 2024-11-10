@@ -1,3 +1,4 @@
+visible = true
 
 compteur++
 if compteur > 360 {compteur = 0}
