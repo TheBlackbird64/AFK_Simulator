@@ -1,1 +1,0 @@
-action_draw_joueur()

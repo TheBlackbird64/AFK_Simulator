@@ -4,7 +4,7 @@ version du template: 1.0
 version du projet: 1.0
 
 
-		BIEN LIRE AVANT DE MODIFIER LE PROJET !!!! 
+		BIEN LIRE AVANT DE MODIFIER LE PROJET !!!!  (DOC obsolète, flemme de la refaire pour l'instant)
 
 
 0. Légende: 
@@ -82,7 +82,7 @@ version du projet: 1.0
 		+ permet d'avoir des boutons suivant la caméra
 	
 	
-6. Player
+6. Joueur
 	Système de déplacement avec plusieurs paramètres réglables.
 	+ plusieurs paramètres pour modifier le gameplay (distance de freinage, accélération, ..)
 	

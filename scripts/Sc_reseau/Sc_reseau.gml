@@ -3,7 +3,7 @@ function reseau_connexion() {
 	var sock_client = network_create_socket(network_socket_tcp)
 	network_set_config(network_config_connect_timeout, 100)
 
-	var r = network_connect_raw(sock_client, "127.0.0.1", 10000)
+	var r = network_connect_raw(sock_client, "services-afksimulator.alwaysdata.net", 8300)
 	
 	network_set_config(network_config_connect_timeout, 500)
 	
