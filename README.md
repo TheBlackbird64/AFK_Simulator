@@ -35,4 +35,4 @@ Voir les releases.
 
 ## Liens utiles
 
-Code du serveur: https://github.com/TheBlackbird64/Serveur-AFKSimulator
+[Code du serveur](https://github.com/TheBlackbird64/Serveur-AFKSimulator)
