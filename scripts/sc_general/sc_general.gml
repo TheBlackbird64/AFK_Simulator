@@ -3,14 +3,19 @@
 
 //set global vars
 set_global_var()
-global.release = false // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
+global.release = true // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
 
 function set_global_var()
 {
-	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
-	global.vie_max = 100 // juste pr le dessin (barre vie)
+	// Reseau
 	global.tps_actualiser_serv_ms = 50
+	global.port = 0
+	global.host = ""
+	
+	// Jeu
 	global.pseudo = ""
+	global.vie_max = 100 // juste pr le dessin (barre vie)
+	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
@@ -39,6 +44,7 @@ function set_global_var_default () {
 	global.inst_ctrl = -1
 	
 	global.pseudo_gagnant = ""
+	
 }
 
 //dessin
@@ -209,11 +215,10 @@ function data_time_ms_to_str(ms, allowMS=true, allowS=true, allowMN=true, allowH
 }
 
 // fonctions de sauvegarde
-function sauvegarde_save(num_save)
+function file_save_globalvars(nom_fichier, tab_noms_var_save)
 {
-	var tab_noms_var_save = []
 	
-	var f = file_text_open_write("sauvegarde_" + string(num_save) + ".txt")
+	var f = file_text_open_write(nom_fichier)
 	var contenu = ""
 	for (var i = 0; array_length(tab_noms_var_save) > i; i++)
 	{
@@ -228,9 +233,9 @@ function sauvegarde_save(num_save)
 	file_text_close(f)
 }
 
-function sauvegarde_load(num_save)
+function file_load_globalvars(nom_fichier)
 {
-	var f = file_text_open_read("sauvegarde_" + string(num_save) + ".txt")
+	var f = file_text_open_read(nom_fichier)
 	var contenu = "a"
 	var contenu2 = "a"
 	while (contenu != "")
@@ -248,16 +253,7 @@ function sauvegarde_load(num_save)
 			{
 				contenu2 = contenu[1]
 			}
-			
-			try
-			{
-				variable_global_set(contenu[0], int64(contenu2))
-			}
-			catch(e)
-			{
-				show_debug_message(e.message)
-				variable_global_set(contenu[0], contenu2)
-			}
+			variable_global_set(contenu[0], contenu2)
 			file_text_readln(f)
 		}
 	}

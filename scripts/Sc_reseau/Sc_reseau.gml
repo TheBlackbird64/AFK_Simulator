@@ -1,16 +1,10 @@
 
 function reseau_connexion() {
+	
 	var sock_client = network_create_socket(network_socket_tcp)
 	network_set_config(network_config_connect_timeout, 100)
 	
-	if global.release {
-		var r = network_connect_raw(sock_client, "services-afksimulator.alwaysdata.net", 8300)
-	}
-	else {
-		var r = network_connect_raw(sock_client, "127.0.0.1", 8300)
-	}
-	
-	
+	var r = network_connect_raw(sock_client, global.host, int64(global.port))
 	network_set_config(network_config_connect_timeout, 500)
 	
 	if r < 0 {

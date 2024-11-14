@@ -1,5 +1,6 @@
 rep = client.msg_lire
 
+
 if rep[0] == "a" {
 	
 	reseau_traiter_msg_actu(joueur, rep[1], ["pseudo", "temps", "to_x", "to_y", "vie", "col", "nb_projectiles", "connecte"])
