@@ -2,11 +2,13 @@
 
 function action_draw_joueur() {
 	if vie > 0 {
+		var fade = 2000
+		
 		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, event_string_to_color(col), image_alpha)
 		
 		var ecart = 2
 		
-		draw_set_all(c_black, (3000-temps) / 3000, fa_middle, fa_center, Font_principal) // 
+		draw_set_all(c_black, (fade-temps) / fade, fa_middle, fa_center, Font_principal) 
 		
 		draw_text(x+obj_larg(), y-15, pseudo)
 		draw_set_color(c_black)
@@ -14,6 +16,10 @@ function action_draw_joueur() {
 		draw_set_color($00FF00)
 		draw_rectangle(x+ecart, y-obj_haut()-10-ecart, x+ecart + (vie/global.vie_max)*(obj_larg()*2-2*ecart), y-obj_haut()-25+ecart, false)
 		draw_reset_all()
+		
+		if connecte == "False" {
+			draw_sprite_ext(S_connexion_icon, 0, x, y, 0.5, 0.5, 0, c_white, (fade-temps) / fade)
+		}
 	}
 }
 

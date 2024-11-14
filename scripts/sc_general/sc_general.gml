@@ -3,12 +3,14 @@
 
 //set global vars
 set_global_var()
+global.release = false // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
 
 function set_global_var()
 {
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
 	global.vie_max = 100 // juste pr le dessin (barre vie)
 	global.tps_actualiser_serv_ms = 50
+	global.pseudo = ""
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
@@ -33,7 +35,6 @@ function set_global_var_default () {
 	global.temps_joueur = 0
 	global.meilleur_temps = 0
 	global.graine_map = 0
-	global.pseudo = ""
 	global.id_joueur = -1
 	global.inst_ctrl = -1
 	

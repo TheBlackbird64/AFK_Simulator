@@ -6,3 +6,7 @@ if rep[0] == "p" {
 	global.id_joueur = int64(rep[2])
 	event_change_room(R_Jeu)
 }
+
+if rep[0] == "f" {
+	nb_joueurs = string(rep[1])
+}

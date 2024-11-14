@@ -1,6 +1,11 @@
 // Fonctions générales
 
 function event_change_room(_room) {
+	if instance_exists(menu_fenetre) {
+		instance_destroy(menu_fenetre)
+		global.focus = 0
+	}
+	
 	room = _room
 }
 

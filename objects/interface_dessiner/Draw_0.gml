@@ -33,4 +33,20 @@ if instance_exists(global.inst_ctrl)
 	draw_text_transformed(cam_sync_x(135), camera_get_view_y(view_camera[0])+45, global.inst_ctrl.nb_projectiles, 0.8, 0.8, 0)
 
 	draw_text(cam_mid_x(), cam_sync_y(50), data_time_ms_to_str(global.temps_joueur, false, true, true, false))
+	
+}
+
+// joueurs connecté
+draw_set_all($B0B0B0, 0.5, -1, -1, Font_principal)
+draw_rectangle(cam_sync_x(1150), cam_sync_y(0), cam_sync_x(1366), cam_sync_y(20+instance_number(joueur)*30), false)
+var inst = 0
+var xs = 0.75
+
+for (var i = 0; i < instance_number(joueur); i++) {
+	inst = instance_find(joueur, i)
+	draw_set_all(c_black, 0.25, -1, -1, Font_principal)
+	draw_rectangle(cam_sync_x(1155), cam_sync_y(10+i*30), cam_sync_x(1360), cam_sync_y(30+i*30), false)
+	draw_set_all(c_black, 1, -1, -1, Font_principal)
+	if string_length(inst.pseudo) > 10 {xs = 0.75 - (string_length(inst.pseudo)-10)*0.04}
+	draw_text_ext_transformed(cam_sync_x(1160), cam_sync_y(10+i*30), inst.pseudo, 0, 190, xs, 0.75, 0)
 }

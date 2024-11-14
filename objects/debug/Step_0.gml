@@ -1,4 +1,6 @@
-//if keyboard_check_pressed(vk_numpad0) {active = not active}
+if not global.release {
+	if keyboard_check_pressed(vk_numpad0) {active = not active}
+}
 visible = active
 
 if active {

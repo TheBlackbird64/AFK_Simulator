@@ -4,6 +4,7 @@ vie = 0
 col = "000000"
 temps = 0
 nb_projectiles = 0
+connecte = "True"
 
 depth = -100
 visible = false

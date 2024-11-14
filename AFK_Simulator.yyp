@@ -82,6 +82,7 @@
     {"id":{"name":"Sc_menu","path":"scripts/Sc_menu/Sc_menu.yy",},},
     {"id":{"name":"Sc_reseau","path":"scripts/Sc_reseau/Sc_reseau.yy",},},
     {"id":{"name":"S_arme1","path":"sprites/S_arme1/S_arme1.yy",},},
+    {"id":{"name":"S_connexion_icon","path":"sprites/S_connexion_icon/S_connexion_icon.yy",},},
     {"id":{"name":"S_general_debug","path":"sprites/S_general_debug/S_general_debug.yy",},},
     {"id":{"name":"S_icon_projectile","path":"sprites/S_icon_projectile/S_icon_projectile.yy",},},
     {"id":{"name":"S_item_color","path":"sprites/S_item_color/S_item_color.yy",},},
