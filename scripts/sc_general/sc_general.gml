@@ -3,7 +3,7 @@
 
 //set global vars
 set_global_var()
-global.release = true // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
+global.release = false // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
 
 function set_global_var()
 {

@@ -11,3 +11,4 @@ socket = ""
 
 msg_tab = []
 msg_lire = []
+msg = ""
