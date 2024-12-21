@@ -17,7 +17,7 @@ set_global_var_default ()
 	global.host = "services-afksimulator.alwaysdata.net"
 	global.port = 8300
 	
-	var nomf = "connexion.txt"
+	var nomf = "config.txt"
 	if file_exists(nomf) {
 		file_load_globalvars(nomf)
 	}

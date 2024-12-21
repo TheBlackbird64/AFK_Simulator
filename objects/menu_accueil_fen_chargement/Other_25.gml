@@ -10,3 +10,9 @@ if rep[0] == "p" {
 if rep[0] == "f" {
 	nb_joueurs = string(rep[1])
 }
+
+if rep[0] == "info" {
+	global.nb_joueur_min = string(rep[1])
+	global.tps_actualiser_serv_ms = string(rep[2])
+	global.vie_max = string(rep[3])
+}

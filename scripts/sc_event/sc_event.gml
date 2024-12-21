@@ -17,6 +17,8 @@ function event_demarrage_room(r) {
 		
 		gen_generer_map(t, 250, 250)
 		
+		//show_debug_message(data_regrouper_2d(t, "\n", " "))
+		
 	}
 }
 

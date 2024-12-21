@@ -3,29 +3,38 @@
 
 //set global vars
 set_global_var()
-global.release = true // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
+global.release = false // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
 
 function set_global_var()
 {
 	// Reseau
-	global.tps_actualiser_serv_ms = 50
 	global.port = 0
 	global.host = ""
 	
 	// Jeu
 	global.pseudo = ""
-	global.vie_max = 100 // juste pr le dessin (barre vie)
 	global.touches = [ord("Z"), ord("S"), ord("D"), ord("Q"), vk_space] // haut, bas, droite, gauche, saut
+	
+	// Vars de génération (uniquement visuel donc que coté client) 0.07; 1
+	global.gen_intervalle_col = 0.07
+	global.gen_nb_voisins_col = 1
+	
+	
+	/* 
+		Tout ce qui suit : variables nécéssaire pour affichage ou calcul 
+		(valeur donné par le serveur)
+		 
+	*/
+	
+	global.vie_max = 100
+	global.nb_joueur_min = 0
+	global.tps_actualiser_serv_ms = 50
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
 	global.gen_val_inferieure = 0.6
 	global.gen_nb_voisins = 3
 	global.nb_dec = 3
-	
-	// Vars de génération (uniquement visuel donc que coté client) 0.07; 1
-	global.gen_intervalle_col = 0.07
-	global.gen_nb_voisins_col = 1
 	
 	set_global_var_default ()
 	action_mort_joueur(true)
