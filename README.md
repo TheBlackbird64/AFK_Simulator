@@ -23,6 +23,9 @@ AFK Simulator est un jeu vidéo **multijoueur** en 2D, au concept simple et uniq
 - Différents modes de jeu (hide&seek, ...)
 
 ## Technologies Utilisées
+
+** Moteur de jeu: Gamemaker Studio 2
+
 **Langages :** C# et GML (GameMaker Language).
 
 **Génération Procédurale :** Utilisation d’un automate cellulaire pour optimiser la gestion des maps. Les informations sont partagées uniquement via la graine de génération, ce qui permet un rendu rapide et synchronisé.
