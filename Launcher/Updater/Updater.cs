@@ -25,7 +25,7 @@ namespace Updater
     {
         /*
          * Fonctionnement: 
-         *  1/ un Updater récupère le numéro de version du logiciel à télécharger et le compare avec le dernier enregistré
+         *  1/ un 'Updater' récupère le numéro de version du logiciel à télécharger et le compare avec le dernier enregistré
          *  2/ Si le numéro n'est pas le même il télécharge le fichier et le dézippe
          *  3/ Lance le fichier téléchargé ou celui déja présent
          *   

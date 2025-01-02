@@ -6,6 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Updater;
 
+/// <summary>
+/// Ce projet contiendra le launcher complet avec une interface graphique. 
+/// Pour l'instant il ne sert pas car le bootstrapper (le progr&amme cencé mettre à jour le launcher) démarre directement le jeu.
+/// </summary>
 
 namespace Launcher
 {
