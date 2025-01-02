@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Launcher/1.0.0": {
+        "dependencies": {
+          "Updater": "1.0.0"
+        },
+        "runtime": {
+          "Launcher.dll": {}
+        }
+      },
+      "Updater/1.0.0": {
+        "runtime": {
+          "Updater.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Launcher/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Updater/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

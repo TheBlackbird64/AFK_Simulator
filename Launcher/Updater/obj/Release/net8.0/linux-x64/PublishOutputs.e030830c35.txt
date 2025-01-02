@@ -1,0 +1,5 @@
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\publish\Updater
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\publish\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\publish\Updater.deps.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\publish\Updater.runtimeconfig.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\publish\Updater.pdb

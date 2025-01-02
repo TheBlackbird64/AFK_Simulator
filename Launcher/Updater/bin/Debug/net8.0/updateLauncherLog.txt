@@ -1,0 +1,7 @@
+The remote server returned an error: (404) Not Found. 26/12/2024 20:40:20
+
+Démarrage du jeu. Intance existante: False 26/12/2024 20:40:20
+An error occurred trying to start process 'AFK Simulator.exe' with working directory 'AFKSimulator'. Le fichier spécifié est introuvable. 26/12/2024 20:40:20
+
+Démarrage du jeu. Intance existante: False 26/12/2024 20:40:56
+Jeu affiché: False 26/12/2024 20:40:57

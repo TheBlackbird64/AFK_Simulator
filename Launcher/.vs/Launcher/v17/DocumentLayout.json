@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3136D2B-80B5-4837-BB71-9A9DE565B6FD}|Updater\\Updater.csproj|d:\\programmation\\game_maker_studio_2\\projet_jeu_afk_simulator\\afk_simulator\\launcher\\updater\\updater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3136D2B-80B5-4837-BB71-9A9DE565B6FD}|Updater\\Updater.csproj|solutionrelative:updater\\updater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3136D2B-80B5-4837-BB71-9A9DE565B6FD}|Updater\\Updater.csproj|d:\\programmation\\game_maker_studio_2\\projet_jeu_afk_simulator\\afk_simulator\\launcher\\updater\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3136D2B-80B5-4837-BB71-9A9DE565B6FD}|Updater\\Updater.csproj|solutionrelative:updater\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34ECC45-7E9A-4F86-946E-A92521974CF6}|Launcher\\Launcher.csproj|d:\\programmation\\game_maker_studio_2\\projet_jeu_afk_simulator\\afk_simulator\\launcher\\launcher\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34ECC45-7E9A-4F86-946E-A92521974CF6}|Launcher\\Launcher.csproj|solutionrelative:launcher\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainProgram.cs",
+              "DocumentMoniker": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\MainProgram.cs",
+              "RelativeDocumentMoniker": "Updater\\MainProgram.cs",
+              "ToolTip": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\MainProgram.cs",
+              "RelativeToolTip": "Updater\\MainProgram.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:10:22.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Updater.cs",
+              "DocumentMoniker": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\Updater.cs",
+              "RelativeDocumentMoniker": "Updater\\Updater.cs",
+              "ToolTip": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\Updater.cs",
+              "RelativeToolTip": "Updater\\Updater.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAAwNAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:10:19.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainProgram.cs",
+              "DocumentMoniker": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Launcher\\MainProgram.cs",
+              "RelativeDocumentMoniker": "Launcher\\MainProgram.cs",
+              "ToolTip": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Launcher\\MainProgram.cs",
+              "RelativeToolTip": "Launcher\\MainProgram.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T19:17:53.07Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

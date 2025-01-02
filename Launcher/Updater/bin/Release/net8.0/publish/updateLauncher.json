@@ -1,0 +1,19 @@
+{
+  "fileName": "updateLauncher.json",
+  "version": "0.0.0",
+  "windows": {
+    "fileToDownload": "AFK_Simulator_windows.zip",
+    "filenameExec": "AFK Simulator.exe"
+  },
+  "linux": {
+    "fileToDownload": "AFK_Simulator_linux.zip",
+    "filenameExec": "AFK Simulator"
+  },
+  "macOS": {
+    "fileToDownload": "AFK_Simulator_macos.zip",
+    "filenameExec": "AFK Simulator"
+  },
+  "fileVersionTxt": "version.txt",
+  "zipFile": "AFKSimulator.zip",
+  "URLServer": "https://afksimulator.alwaysdata.net/files/"
+}

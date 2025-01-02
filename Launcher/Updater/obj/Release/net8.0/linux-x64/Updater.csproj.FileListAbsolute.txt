@@ -1,0 +1,15 @@
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\Updater
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\Updater.deps.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\Updater.runtimeconfig.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\linux-x64\Updater.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.GeneratedMSBuildEditorConfig.editorconfig
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.AssemblyInfoInputs.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.AssemblyInfo.cs
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.csproj.CoreCompileInputs.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.sourcelink.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\refint\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\Updater.genruntimeconfig.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\linux-x64\ref\Updater.dll

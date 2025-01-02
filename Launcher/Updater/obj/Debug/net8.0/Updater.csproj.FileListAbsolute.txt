@@ -1,0 +1,15 @@
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.GeneratedMSBuildEditorConfig.editorconfig
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.AssemblyInfoInputs.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.AssemblyInfo.cs
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.csproj.CoreCompileInputs.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.sourcelink.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Debug\net8.0\Updater.exe
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Debug\net8.0\Updater.deps.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Debug\net8.0\Updater.runtimeconfig.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Debug\net8.0\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Debug\net8.0\Updater.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\refint\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\Updater.genruntimeconfig.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Debug\net8.0\ref\Updater.dll
