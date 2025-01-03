@@ -1,0 +1,1 @@
+global.focus = 0

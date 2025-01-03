@@ -3,10 +3,10 @@
 function event_change_room(_room) {
 	if instance_exists(menu_fenetre) {
 		instance_destroy(menu_fenetre)
-		global.focus = 0
+		global.focus = 1000
 	}
 	
-	room = _room
+	instance_create_depth(0, 0, -600, anim_transition_room, {_room : _room})
 }
 
 function event_demarrage_room(r) {

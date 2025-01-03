@@ -13,3 +13,7 @@ function declencheur_lancer_partie() {
 function declencheur_retour() {
 	event_change_room(R_accueil)
 }
+
+function declencheur_tuto() {
+	url_open("http://example.com")
+}

@@ -1,4 +1,4 @@
-if not global.release {
+if not global.release or true {
 	if keyboard_check_pressed(vk_numpad0) {active = not active}
 }
 visible = active
@@ -10,4 +10,5 @@ if active {
 		layer_set_visible(layer_get_id("Assets_1"), not layer_get_visible(layer_get_id("Assets_1")))
 	}
 	if keyboard_check_pressed(vk_numpad3) {global.animation = not global.animation}
+	if keyboard_check_pressed(vk_numpad4) {event_change_room(room)}
 }

@@ -61,3 +61,4 @@ function action_game_over_player() {
 	instance_create_depth(0, 0, -150, anim_mort_player)
 	
 }
+
