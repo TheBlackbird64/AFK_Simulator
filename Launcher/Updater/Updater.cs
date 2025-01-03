@@ -96,10 +96,10 @@ namespace Updater
         {
             if (UpdateNeeded())
             {
-                DownloadFile();
+                //DownloadFile();
             }
 
-
+            
             try
             {
                 if (zipFile.Length > 3)
@@ -175,8 +175,9 @@ namespace Updater
                 Log(e.Message, true);
 
             }
-
+            
         }
+
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
 

@@ -1,0 +1,19 @@
+{
+  "fileName": "updateLauncher.json",
+  "version": "0.0.0",
+  "windows": {
+    "fileToDownload": "",
+    "filenameExec": ""
+  },
+  "linux": {
+    "fileToDownload": "",
+    "filenameExec": ""
+  },
+  "macOS": {
+    "fileToDownload": "",
+    "filenameExec": ""
+  },
+  "fileVersionTxt": "",
+  "zipFile": "",
+  "URLServer": ""
+}
