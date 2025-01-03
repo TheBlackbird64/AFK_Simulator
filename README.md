@@ -1,6 +1,6 @@
 # AFK Simulator
 
-AFK Simulator est un jeu vidéo **multijoueur** en 2D, au concept simple et unique : le but est de rester immobile, ou "AFK", pour gagner. Mais attention, les autres joueurs feront tout pour vous en empêcher !
+AFK Simulator est un jeu vidéo **multijoueur** en 2D, au concept simple et unique : le but est de rester immobile en se camouflant, ou "AFK", pour gagner. Mais attention, les autres joueurs feront tout pour vous en empêcher !
 
 ## Description du Jeu
 **Style de jeu :** Multijoueur, 3 à 10 joueurs par partie avec des parties courtes et intenses.
