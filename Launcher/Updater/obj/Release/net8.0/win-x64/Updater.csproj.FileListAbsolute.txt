@@ -1,8 +1,9 @@
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Updater.exe
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Updater.deps.json
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Updater.runtimeconfig.json
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Updater.dll
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Updater.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.GeneratedMSBuildEditorConfig.editorconfig
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.AssemblyInfoInputs.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.AssemblyInfo.cs
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.csproj.CoreCompileInputs.cache
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.sourcelink.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.genruntimeconfig.cache
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Microsoft.CSharp.dll
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Microsoft.VisualBasic.Core.dll
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\Microsoft.VisualBasic.dll
@@ -185,14 +186,13 @@ D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Laun
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\mscordbi.dll
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\mscorrc.dll
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\msquic.dll
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.GeneratedMSBuildEditorConfig.editorconfig
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.AssemblyInfoInputs.cache
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.AssemblyInfo.cs
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.csproj.CoreCompileInputs.cache
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.sourcelink.json
 D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.csproj.Up2Date
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.dll
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\refint\Updater.dll
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.pdb
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\Updater.genruntimeconfig.cache
-D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\ref\Updater.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\AFK Simulator Launcher.exe
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\AFK Simulator Launcher.deps.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\AFK Simulator Launcher.runtimeconfig.json
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\AFK Simulator Launcher.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\bin\Release\net8.0\win-x64\AFK Simulator Launcher.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\AFK Simulator Launcher.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\refint\AFK Simulator Launcher.dll
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\AFK Simulator Launcher.pdb
+D:\programmation\Game_maker_studio_2\projet_jeu_AFK_simulator\AFK_Simulator\Launcher\Updater\obj\Release\net8.0\win-x64\ref\AFK Simulator Launcher.dll

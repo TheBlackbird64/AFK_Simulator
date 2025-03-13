@@ -12,3 +12,5 @@ socket = ""
 msg_tab = []
 msg_lire = []
 msg = ""
+
+dernier_msg_crash = ""

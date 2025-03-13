@@ -12,3 +12,4 @@ obj_set_scale(0.5)
 
 global.pause = true
 envoi = false
+

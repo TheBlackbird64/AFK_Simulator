@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\Updater.csproj",
-        "projectName": "Updater",
+        "projectName": "AFK Simulator Launcher",
         "projectPath": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\Updater.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
         "outputPath": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\obj\\",
@@ -62,15 +62,15 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
               "version": "[8.0.5, 8.0.5]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
               "version": "[8.0.5, 8.0.5]"
             },
             {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "name": "Microsoft.NETCore.App.Runtime.osx-x64",
               "version": "[8.0.5, 8.0.5]"
             }
           ],
@@ -83,7 +83,7 @@
         }
       },
       "runtimes": {
-        "win-x64": {
+        "osx-x64": {
           "#import": []
         }
       }

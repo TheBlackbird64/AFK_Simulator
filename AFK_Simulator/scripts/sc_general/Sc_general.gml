@@ -3,7 +3,8 @@
 
 //set global vars
 set_global_var()
-global.release = true // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
+global.release = false // Mettre ceci à true pour faire une release de façon à pas avoir à modif tout ce qui est 'debug'
+global.version = "1.0.0" // Pour remplacer le fichier de config si il est vieux
 
 function set_global_var()
 {
@@ -29,6 +30,7 @@ function set_global_var()
 	global.vie_max = 100
 	global.nb_joueur_min = 0
 	global.tps_actualiser_serv_ms = 50
+	global.ajout_couleur = 0
 	
 	// Vars de génération map
 	global.gen_taille_map = 50
@@ -92,16 +94,6 @@ function data_caracteres_non_valide(str)
 	return result
 }
 
-function data_liste_vers_tab(liste)
-{
-	var tab = []
-	for (var i = 0; ds_list_size(liste) > i; i++)
-	{
-		array_push(tab, ds_list_find_value(liste, i))
-	}
-	return tab
-}
-
 function data_regrouper(tab, caractere)
 {
 	var a = 0
@@ -115,39 +107,6 @@ function data_regrouper(tab, caractere)
 	
 	if array_length(tab) == 0 {return caractere}
 	else {return b}
-}
-
-function data_regrouper_2d(tab_2d, carac_1, carac_2)
-{
-	var temp_tab = []
-	for (var i = 0; array_length(tab_2d) > i; i++)
-	{
-		array_push(temp_tab, data_regrouper(tab_2d[i], carac_2))
-	}
-	
-	return data_regrouper(temp_tab, carac_1)
-}
-
-function data_saut_ligne_str(str, nb_carac)
-{
-	var num = 0
-	var liste_mots = data_separer(str, " ")
-	for (var i = 0; array_length(liste_mots) > i; i++)
-	{
-		if string_length(liste_mots[i]) < nb_carac
-		{
-			if num + string_length(liste_mots[i]) > nb_carac
-			{
-				liste_mots[i] = "\n" + liste_mots[i]
-				num = string_length(liste_mots[i])+1
-			}
-			else
-			{
-				num += string_length(liste_mots[i])+1
-			}
-		}
-	}
-	return data_regrouper(liste_mots, " ")
 }
 
 function data_separer(str, caractere)
@@ -169,17 +128,6 @@ function data_separer(str, caractere)
 	}
 	
 	return tab
-}
-
-function data_tab_index(tab, value)
-{
-	//on fournit une val et ça retourne l'index
-	var index = -1
-	for (var i = 0; array_length(tab) > i; i++)
-	{
-		if tab[i] == value {index = i}
-	}
-	return index
 }
 
 function data_hex_to_dec(hex) 

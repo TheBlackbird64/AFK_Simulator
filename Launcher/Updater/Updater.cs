@@ -96,7 +96,7 @@ namespace Updater
         {
             if (UpdateNeeded())
             {
-                //DownloadFile();
+                DownloadFileExe();
             }
 
             
@@ -186,7 +186,7 @@ namespace Updater
 
             try
             {
-                client.DownloadFile(URLServer + "/" + fileVersionTxt, FileTempName);
+                Download(URLServer + "/" + fileVersionTxt, FileTempName);
             }
             catch (Exception e)
             {
@@ -199,7 +199,7 @@ namespace Updater
             return currentVersion != version;
         }
 
-        public void DownloadFile()
+        public void DownloadFileExe()
         {
 
             // Supprimer le zip
@@ -213,16 +213,16 @@ namespace Updater
             {
                 if (GetOS() == "Linux")
                 {
-                    client.DownloadFile(URLServer + "/" + linux.fileToDownload, zipFile);
+                    Download(URLServer + "/" + linux.fileToDownload, zipFile);
                 }
                 if (GetOS() == "MacOS")
                 {
-                    client.DownloadFile(URLServer + "/" + macOS.fileToDownload, zipFile);
+                    Download(URLServer + "/" + macOS.fileToDownload, zipFile);
 
                 }
                 else // Windows par défaut
                 {
-                    client.DownloadFile(URLServer + "/" + windows.fileToDownload, zipFile);
+                    Download(URLServer + "/" + windows.fileToDownload, zipFile);
                 }
 
                 if (zipFile.Length > 3)
@@ -259,6 +259,11 @@ namespace Updater
             {
                 Environment.Exit(0);
             }
+        }
+
+        public void Download(string chemin, string fileName)
+        {
+            client.DownloadFile(chemin, fileName);
         }
     }
 }

@@ -1,4 +1,4 @@
-
+rep = client.msg_lire
 
 if rep[0] == "c" {
 	menu_detruire_fenetre(id)

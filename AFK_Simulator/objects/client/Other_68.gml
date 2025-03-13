@@ -21,6 +21,8 @@ if type == network_type_data {
 		for (var i = 0; array_length(msg_tab) > i; i++){
 			msg_lire = msg_tab[i]
 			if debug.active {show_debug_message(msg_lire)}
+			
+			if not is_array(msg_lire) {msg_lire = [msg_lire]}
 			with (all) {event_user(15)}
 		}
 		

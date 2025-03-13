@@ -15,5 +15,5 @@ function declencheur_retour() {
 }
 
 function declencheur_tuto() {
-	url_open("http://example.com")
+	url_open("http://afk-simulator.com") // /tutorial à régler
 }

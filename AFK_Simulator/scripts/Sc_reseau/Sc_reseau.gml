@@ -1,4 +1,9 @@
 
+function reseau_fin_connexion() {
+	network_destroy(client.socket)
+	client.connecte = false
+}
+
 function reseau_connexion() {
 	
 	var sock_client = network_create_socket(network_socket_tcp)
@@ -15,16 +20,16 @@ function reseau_connexion() {
 }
 
 function reseau_send(msg_tab, sock = client.socket) {
-	msg_tab = data_regrouper(msg_tab, client.sep2)
-	msg_tab += client.sep1
+	var msg_tab_envoi = data_regrouper(msg_tab, client.sep2)
+	msg_tab_envoi += client.sep1
 	
 	var buff = buffer_create(1, buffer_grow, 1)
 	buffer_seek(buff, buffer_seek_start, 0)
-	buffer_write(buff, buffer_string, msg_tab)
+	buffer_write(buff, buffer_string, msg_tab_envoi)
 	
-	if network_send_raw(sock, buff, string_length(msg_tab)) < 0 {
-		network_destroy(client.socket)
-		client.connecte = false
+	if network_send_raw(sock, buff, string_length(msg_tab_envoi)) < 0 {
+		reseau_fin_connexion()
+		client.dernier_msg_crash = msg_tab
 	}
 }
 

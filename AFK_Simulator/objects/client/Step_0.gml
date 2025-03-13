@@ -5,4 +5,9 @@ if not connecte {
 	}
 	socket = reseau_connexion()
 	connecte = socket != -1
+	
+	if connecte and dernier_msg_crash != "" {
+		reseau_send(dernier_msg_crash)
+		if connecte {dernier_msg_crash = ""}
+	}
 }

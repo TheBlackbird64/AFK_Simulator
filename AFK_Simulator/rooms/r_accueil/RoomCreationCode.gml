@@ -13,21 +13,34 @@ gen_generer_map(t, 50, 0, 150, val_inf)
 set_global_var_default ()
 
 // setup reseau
-{
-	global.host = "services-afksimulator.alwaysdata.net"
-	global.port = 8300
+var configNotOk = true
+while configNotOk {
+	
+	global.host = "afk-simulator.com"
+	global.port = 4000
+	
+	var v = global.version
+	configNotOk = false
 	
 	var nomf = "config.txt"
 	if file_exists(nomf) {
+		global.version = "" // Au cas ou le fichier est vieux et ne contient pas de numéro de version
 		file_load_globalvars(nomf)
 	}
 	else {
-		file_save_globalvars(nomf, ["host", "port"])
+		file_save_globalvars(nomf, ["host", "port", "version"])
+	}
+	
+	if v != global.version {
+		file_delete(nomf)
+		configNotOk = true
+		
+		global.version = v
 	}
 	
 	if not global.release {
 		global.host = "127.0.0.1"
-		global.port = 8300
+		global.port = 4000
 	}
 }
 

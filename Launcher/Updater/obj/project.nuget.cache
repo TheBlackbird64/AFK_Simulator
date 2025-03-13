@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9AdAzRd7wqs=",
+  "dgSpecHash": "alUXTV5b1Xg=",
   "success": true,
   "projectFilePath": "D:\\programmation\\Game_maker_studio_2\\projet_jeu_AFK_simulator\\AFK_Simulator\\Launcher\\Updater\\Updater.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.5\\microsoft.netcore.app.runtime.win-x64.8.0.5.nupkg.sha512",
-    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.5.nupkg.sha512",
-    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.5\\microsoft.aspnetcore.app.runtime.win-x64.8.0.5.nupkg.sha512"
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.app.runtime.osx-x64\\8.0.5\\microsoft.netcore.app.runtime.osx-x64.8.0.5.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.osx-x64\\8.0.5\\microsoft.aspnetcore.app.runtime.osx-x64.8.0.5.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.app.host.osx-x64\\8.0.5\\microsoft.netcore.app.host.osx-x64.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }

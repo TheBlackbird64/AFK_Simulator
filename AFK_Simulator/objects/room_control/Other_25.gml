@@ -8,7 +8,7 @@ if rep[0] == "a" {
 	reseau_traiter_msg_actu(item_color, rep[3], ["x", "_y", "col"])
 	reseau_traiter_msg_actu(item_recharge, rep[4], ["x", "_y"])
 	
-	
+	//if debug.active {show_debug_message(rep[3])}
 }
 if rep[0] == "g" {
 	global.pseudo_gagnant = rep[1]

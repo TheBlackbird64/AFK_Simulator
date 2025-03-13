@@ -17,10 +17,10 @@ if not config {
 	if gen {
 		//var _graine_save = gen_nb_rnd(-1, true)
 		
-		var r = gen_random_range(0, 15, 0) * 17
-		var g = gen_random_range(0, 15, 0) * 17
-		var b = gen_random_range(0, 15, 0) * 17
-
+		var r = min(gen_random_range(0, round(255/global.ajout_couleur)+1, 0) * global.ajout_couleur, 255)
+		var g = min(gen_random_range(0, round(255/global.ajout_couleur)+1, 0) * global.ajout_couleur, 255)
+		var b = min(gen_random_range(0, round(255/global.ajout_couleur)+1, 0) * global.ajout_couleur, 255)
+		
 		col = make_color_rgb(r, g, b)
 		//gen_nb_rnd(_graine_save)
 		
